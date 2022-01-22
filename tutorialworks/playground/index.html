@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>reveal.js - Barebones</title>
+        <link rel="stylesheet" href="../../dist/reveal.css">
+		<link rel="stylesheet" href="../../dist/theme/tutorialworks.css" id="theme">
+        <link rel="stylesheet" href="../../plugin/highlight/zenburn.css">
+    </head>
+    <body>
+
+        <div class="reveal">
+            <div class="slides">
+                <section data-markdown="content.md" data-charset="utf-8">
+                </section>
+            </div>
+        </div>
+
+        <script src="../../dist/reveal.js"></script>
+        <script src="../../plugin/markdown/markdown.js"></script>
+        <script src="../../plugin/highlight/highlight.js"></script>
+        <script>
+            Reveal.initialize({
+                controls: false,
+                progress: false,
+
+                history: true,
+
+                backgroundTransition: 'none',
+                transition: 'none',
+
+                // width: 1920, // Don't set width and height because it makes the text really small.
+                // height: 1080,
+
+                center: true,  // Vertical centering of slides
+                
+                plugins: [ RevealMarkdown, RevealHighlight ]
+            });
+        </script>
+
+    </body>
+</html>

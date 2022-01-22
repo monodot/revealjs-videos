@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>reveal.js - Barebones</title>
+        <link rel="stylesheet" href="../../dist/reveal.css">
+		<link rel="stylesheet" href="../../dist/theme/tutorialworks.css" id="theme">
+        <link rel="stylesheet" href="../../plugin/highlight/zenburn.css">
+    </head>
+    <body>
+
+        <div class="reveal">
+            <div class="slides">
+
+                <section data-markdown data-separator="---">
+                    <script type="text/template">
+                        ## Override Spring Boot properties in Kubernetes
+
+                        ---
+                        <!-- .slide: data-background-video="properties.mp4" -->
+                        ---
+
+                        <div class="r-hstack">
+                            <img src="leaf.svg" width="250" height="250">
+                            <img src="kubernetes.svg"height="300">
+                        </div>
+                        ---
+
+                        <img src="planet-earth.svg" height="250">
+
+                        ---
+                        An application.properties file:
+                        
+                        <pre style="font-size: 2.5rem"><code data-trim data-line-numbers="4">
+                        database.username = brenda
+                        database.username = brenda123
+
+                        favourite.cheese = camembert
+                        </code></pre>
+
+                        ---
+                        <!-- .slide: data-background-video="output-property.mp4" -->
+                        ---
+                        <!-- .slide: data-background-image="camembert.png" -->
+                        ---
+                        <!-- .slide: data-background-image="brie.png" -->
+                        ---
+                        ## Overrides <!-- .element: class="r-fit-text"-->
+                        ## Environment variables <!-- .element: class="fragment" -->
+                        ---
+                        <div class="r-hstack">
+                            <img src="kubernetes.svg" height="350"/>
+                            <img src="planet-earth.svg" height="230" class="fragment">
+                        </div>
+                        ---
+                        `favourite.cheese` <!-- .element: class="r-fit-text fragment" -->
+
+                        `FAVOURITE_CHEESE` <!-- .element: class="r-fit-text fragment" -->
+                        ---
+                        <!-- .slide: data-background-video="env-explicit-value.mp4" -->
+                        ---
+                        <!-- .slide: data-background-video="env-valuefrom-configmap.mp4" -->
+                        ---
+                        <!-- .slide: data-background-video="kubectl-set-env.mp4" -->
+                        ---
+                        <div class="r-stack">
+                            <img src="favourite-can.png" width="1149" height="591"/>
+                            <img src="cheese-in-a-can.jpg" width="425" height="425" class="fragment" style="box-shadow: 10px 10px #ddd"/>
+                        </div>
+                        ---
+                        <!-- .slide: data-transition-speed="slow" -->
+                        <img src="../common/logo.png" style="padding-top: 400px; height: 80px; width: auto;"/>
+
+                    </script>
+                </section>
+
+            </div>
+        </div>
+
+        <script src="../../dist/reveal.js"></script>
+        <script src="../../plugin/markdown/markdown.js"></script>
+        <script src="../../plugin/highlight/highlight.js"></script>
+        <script>
+            Reveal.initialize({
+                controls: false,
+                progress: false,
+
+                history: true,
+
+                transition: 'none',
+
+                center: true,  // Vertical centering of slides
+                
+                plugins: [ RevealMarkdown, RevealHighlight ]
+            });
+        </script>
+
+    </body>
+</html>
